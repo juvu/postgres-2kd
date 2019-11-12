@@ -1,10 +1,10 @@
-FROM postgres:9.6
+FROM postgres:11
 MAINTAINER Eugene Lisitsky <lisitsky@gmail.com>
 
-ENV PG_VERSION 9.6.0
+ENV PG_VERSION 11.0.0
 
 RUN set -xe  \
-    && apt-get update && apt-get install -y build-essential curl postgresql-server-dev-9.6 \
+    && apt-get update && apt-get install -y build-essential curl postgresql-server-dev-11. \
     && mkdir /build \
     && curl https://ftp.postgresql.org/pub/source/v$PG_VERSION/postgresql-$PG_VERSION.tar.bz2 \
             -o /build/postgresql-$PG_VERSION.tar.bz2 \
